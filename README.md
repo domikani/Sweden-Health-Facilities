@@ -1,4 +1,9 @@
-# HealthFacilities
+# Sweden Health Facilities App
+This project is about the health facilities in Sweden. Data derived from Humanitarian Open Street Map Team (HOTOSM).
+
+Source: https://data.humdata.org/dataset/hotosm_swe_health_facilities
+
+Source Last updated at https://data.humdata.org/organization/hot : 2020-09-04
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
