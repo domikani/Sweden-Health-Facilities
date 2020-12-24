@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li
+
+    *ngFor="let facility of facilities;"
+    title="{{facility.name | titlecase}}"
+    (click)="onFacilitySelected(facility)"
+    >
+
+      {{facility.name | titlecase}}
+    </li>
+
+  </ul>
+</nav>

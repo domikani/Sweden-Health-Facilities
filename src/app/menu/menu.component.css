@@ -1,0 +1,23 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #034c81;
+  color: #ffffff;
+  cursor: pointer;
+
+  padding: 0.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  border-left: 4px solid transparent;
+}
+
+li:hover {
+  color: #c7dbe6;
+  border-left: 4px solid #bfb1c1;
+}
