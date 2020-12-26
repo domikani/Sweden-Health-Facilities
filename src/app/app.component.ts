@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Facility} from './facility';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +13,6 @@ export class AppComponent {
   currentFacility: Facility;
 
   handleFacilityChange(facility: Facility): void {
-    console.log(facility);
     this.currentFacility = facility;
   }
 }

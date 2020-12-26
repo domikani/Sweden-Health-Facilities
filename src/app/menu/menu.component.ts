@@ -12,8 +12,6 @@ export class MenuComponent implements OnInit {
 
   @Output() facilitySelected: EventEmitter<Facility> = new EventEmitter();
 
-  constructor() {
-  }
 
   onFacilitySelected(facility: Facility): void {
     this.facilitySelected.emit(facility);

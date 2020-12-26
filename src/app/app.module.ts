@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { FacilityInfoComponent } from './facility-info/facility-info.component';
-import { FacilityInfoPanelComponent } from './facility-info-panel/facility-info-panel.component';
-import { FacilityInfoMapComponent } from './facility-info-map/facility-info-map.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {MenuComponent} from './menu/menu.component';
+import {FacilityInfoComponent} from './facility-info/facility-info.component';
+import {FacilityInfoPanelComponent} from './facility-info-panel/facility-info-panel.component';
+import {FacilityInfoMapComponent} from './facility-info-map/facility-info-map.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,10 @@ import { FacilityInfoMapComponent } from './facility-info-map/facility-info-map.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

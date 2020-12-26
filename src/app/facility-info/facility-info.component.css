@@ -1,3 +1,9 @@
+#facility-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 #facility-info {
   display: flex;
   flex-direction: column;
@@ -8,6 +14,7 @@
   flex: 1;
   height: 100%;
   width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -15,16 +22,19 @@
 
   background-color: #5ba2f4;
   color: #fff;
-  border-bottom: solid 4px#c9bbaa;
+  border-bottom: solid 4px #034c81;
 }
 
 @media screen and (max-width: 400px) {
   #facility-info-panel {
-    border-top: solid 4px#c9bbaa;
+    border-top: solid 4px #c9bbaa;
     border-bottom: solid 2px #034c81;
   }
 }
 
 #leaflet-map {
   flex: 5;
+  height: 100%;
+  width: 100%;
+
 }

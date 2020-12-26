@@ -1,8 +1,12 @@
 <div id="app">
-  <app-menu id="menu" (facilitySelected)="handleFacilityChange($event)">
-
+  <app-menu
+    id="menu"
+    (facilitySelected)="handleFacilityChange($event)">
   </app-menu>
-  <app-facility-info id="facility-info" [facility]="currentFacility">
+
+  <app-facility-info
+    id="facility-info"
+    [facility]="currentFacility">
 
   </app-facility-info>
 </div>
