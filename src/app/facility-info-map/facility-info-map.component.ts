@@ -29,8 +29,8 @@ export class FacilityInfoMapComponent implements OnInit, AfterViewInit, OnChange
     }
 
     if (changes.facility.currentValue) {
-      const {lat, lng, name} = changes.facility.currentValue;
-      this.map.update(lat, lng, name);
+      const {lat, lng, name, facility, icon} = changes.facility.currentValue;
+      this.map.update(lat, lng, name, facility, icon);
     }
   }
 }

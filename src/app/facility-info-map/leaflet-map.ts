@@ -1,5 +1,4 @@
 import * as Leaflet from 'leaflet';
-
 // By default, zoom the map to this level
 const defaultZoom = 14;
 
@@ -11,6 +10,7 @@ const sweden = {
 // Create a class to manage our map and popup
 export class LeafletMap {
   map: Leaflet.Map;
+  marker: Leaflet.Marker;
 
   constructor(el: string | HTMLElement) {
     this.map = Leaflet.map(el);
@@ -26,23 +26,28 @@ export class LeafletMap {
 
 
   // update method, takes a location info, and updates the map and popup
-  update(lat: number, lng: number, name: string): void {
-    const hospitalIcon = Leaflet.icon({
-      iconUrl: 'assets/img/hospital.png',
-      iconSize: [25, 25], // width and height of the image in pixels
+  update(lat: number, lng: number, name: string, facility: string, icon: string): void {
+    const facilityIcon = Leaflet.icon({
+      iconUrl: icon,
+      iconSize: [50, 50], // width and height of the image in pixels
       shadowSize: [35, 20], // width, height of optional shadow image
       iconAnchor: [12, 12], // point of the icon which will correspond to marker's location
       popupAnchor: [0, 0]
     });
+
     // convert lat/lng to Leaflet LatLng Object
     const coords = new Leaflet.LatLng(lat, lng);
     // Reposition the map to this location
     this.map.setView(coords, defaultZoom);
-
-    Leaflet
-      .marker(coords, {icon: hospitalIcon})
-      .bindPopup(name)
-      .addTo(this.map);
+    if (this.marker) {
+      this.marker.setLatLng(coords);
+      this.marker.setIcon(facilityIcon);
+    } else {
+      this.marker = Leaflet
+        .marker(coords, {icon: facilityIcon})
+        .bindPopup(name)
+        .addTo(this.map);
+    }
 
     // Update popup to the same position, with new name text
   }

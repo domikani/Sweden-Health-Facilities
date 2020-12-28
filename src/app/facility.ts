@@ -8,4 +8,5 @@ export interface Facility {
   name: string;
   lat: number;
   lng: number;
+  icon: string;
 }
